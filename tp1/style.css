@@ -1,0 +1,32 @@
+table {
+ border-width:1px; 
+ border-style:solid; 
+ border-color:black;
+ width:100%;
+ }
+td { 
+ border-width:1px;
+ border-style:solid; 
+ border-color:black;
+
+ }
+#td1{
+ width:80%;
+}
+
+#td2{
+ width:10%;
+}
+
+#td3{
+ width:30%;
+}
+
+#td4{
+ width:40%;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
