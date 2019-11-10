@@ -22,12 +22,55 @@
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
+        
+        
+         <script type="text/javascript" src="formulaire.js"></script>
+              
+            
+   
+            
+
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>        
-        <h1>tp2</h1>
+        <h1 style="text-align: center">TP2-AW</h1>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        
+        <img src="../galilee.png" alt="Logo Galilee" style="padding-left: 300px"/>
+        <h1 style="text-align: center">Saisie d'une fiche "Personne"</h1>
+        
+        
+        <form id="form1">
+            
+            <label for="nom"> Nom :</label>
+            <input id="nom" type="text" name="Nom" placeholder="introduisez votre nom" maxlength="20" minlength="5"> 
+           
+            <label for="prenom"> Prénom :</label><br>
+            <input id="prenom" type="text" name="prenom" placeholder="introduisez votre Prénom" maxlength="20" minlength="5"> 
+            
+            <label for="date">Date de Naissance :</label><br>
+            <input id="date" type="date" name="date de naissance" >
+            
+            <label for="adress"> Adresse :</label>
+            <input id="adress" type="text" name="adress" placeholder="introduisez votre adresse" maxlength="50" minlength="5"> 
+            
+            <label for="email">Mail :</label>
+            <input id="email" type="email"  placeholder="introduisez votre Email" maxlength="30" minlength="5"> 
+            
+            <input type="button" value="valider"  onclick="validation()"  >
+            
+        </form>
+        <div id="answer">
+            <div id="error"  >
+            
+            </div>
+            
+            <div id="resultat">
+                
+            
+            </div>
+        
+        </div>
+
     </body>
 </html>
