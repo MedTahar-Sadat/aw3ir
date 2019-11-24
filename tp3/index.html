@@ -36,8 +36,8 @@
                 console.log( "DOM ready!" );
                 $( function() {
                 $( "#datepicker" ).datepicker({
-                    altFormat: "dd-mm-yy",
-                    maxDate: "+1d +1m +1y"
+                    dateFormat: "dd-mm-yy",
+                    maxDate: "-1d "
                     
                 });
                  } );
@@ -99,7 +99,7 @@
             </div>
             <div >
                 <label for="datepicker">Date de Naissance:</label>
-                <input id="datepicker" type="text" class="form-control" placeholder="JJ/MM/AA">
+                <input id="datepicker" type="text" class="form-control" placeholder="dd-mm-yyyy">
             </div>
             <div >
                 <label for="adress">Adresse:</label>
