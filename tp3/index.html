@@ -49,9 +49,9 @@
                   $(".modal-body").html("Veuillez remplir tout les champs svp"); 
                 }
                 else if($("input").val().length != 0){
-                $(".modal-title").html('\<p>Bienvenu(e) '+ $("#nom").val() + '</p\>' );
+                $(".modal-title").html('\<p>Bienvenu(e) '+ $("#prenom").val() + '</p\>' );
                 
-                $(".modal-body").html('Vous etes né le ' +  $("#datepicker").val() + ' et vous habitez ' + '\<strong style="color:blue;">' +$("#adress").val() + '</strong\>' +'\<br\>'+ '<img src="https://maps.googleapis.com/maps/api/staticmap?markers='+$("#adress").val()+'&zoom=7&size=250x200&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg" /\>'  );
+                $(".modal-body").html('Vous etes né le ' +  $("#datepicker").val() + ' et vous habitez ' + '\<strong style="color:blue;">' +$("#adress").val() + '</strong\>' +'\<br\>'+ '<img src="https://maps.googleapis.com/maps/api/staticmap?markers='+$("#adress").val()+'&zoom=7&size=280x150&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg" /\>'  );
 
                 }
              
