@@ -11,23 +11,135 @@
         <!-- Place favicon.ico in the root directory -->
 
         <style>
+          
           body{
               background-color: #e9ebee;              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
               margin: 0 auto;
-              max-width: 800px;              
+              max-width: 800px;   
+              padding-left: 500px;
           }
         </style>
+
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script>
+            $(function() {
+                console.log( "DOM ready!" );
+                $( function() {
+                $( "#datepicker" ).datepicker({
+                    altFormat: "dd-mm-yy",
+                    maxDate: "+1d +1m +1y"
+                    
+                });
+                 } );
+                
+                $("#valider").click(function(){
+                if($("#nom").val().length==0 || $("#prenom").val().length==0 || $("#datepicker").val().length==0 || 
+                       $("#adress").val().length==0 || $("#mail").val().length==0) {
+                  $(".modal-title").html("Message Modal");  
+                  $(".modal-body").html("Veuillez remplir tout les champs svp"); 
+                }
+                else if($("input").val().length != 0){
+                $(".modal-title").html('\<p>Bienvenu(e) '+ $("#nom").val() + '</p\>' );
+                
+                $(".modal-body").html('Vous etes né le ' +  $("#datepicker").val() + ' et vous habitez ' + '\<strong style="color:blue;">' +$("#adress").val() + '</strong\>' +'\<br\>'+ '<img src="https://maps.googleapis.com/maps/api/staticmap?markers='+$("#adress").val()+'&zoom=7&size=250x200&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg" /\>'  );
+
+                }
+             
+            });
+                });
+        
+        
+        
+        
+        </script>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
     </head>
-    <body>        
-        <h1>tp3</h1>
+    <body  >        
+        
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+   
+        
+            <h1 style="text-align: center">TP3-AW</h1>
+        <!-- Add your site or application content here -->
+        
+        <img src="../galilee.png" alt="Logo Galilee" />
+       
+        
+        
+        
+        
+        
+        
+        <div class="container-fluid">
+            
+            
+            <div class="row">
+            <form style="margin-top: 50px">
+                
+            <div >
+                <label for="nom">Nom:</label>
+                <input id="nom" type="text" class="form-control " placeholder="Nom">
+            </div>
+            <div >
+                <label for="prenom">Prénom:</label>
+                <input id="prenom" type="text" class="form-control" placeholder="Prénom">
+            </div>
+            <div >
+                <label for="datepicker">Date de Naissance:</label>
+                <input id="datepicker" type="text" class="form-control" placeholder="JJ/MM/AA">
+            </div>
+            <div >
+                <label for="adress">Adresse:</label>
+                <input id="adress" type="text" class="form-control" placeholder="Adresse">
+            </div>
+            <div >
+                <label for="mail">Mail:</label>
+                <input id="mail" type="email" class="form-control" placeholder="Mail">
+            </div>
+                <br>
+            <button id="valider" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Valider</button>
+           
+                <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <p>Veuillez introduire les champs svp</p>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+               
+            </form>
+            
+
+         </div>   
+        </div>
     </body>
 </html>
